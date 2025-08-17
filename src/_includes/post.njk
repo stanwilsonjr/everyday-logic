@@ -1,0 +1,54 @@
+---
+layout: base.njk
+---
+
+<div class="min-h-screen bg-background">
+  {% include "navigation.njk" %}
+
+  <!-- Article -->
+  <article class="py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+      <!-- Article Header -->
+      <header class="mb-12">
+        <div class="flex items-center space-x-4 text-sm text-gray-200 mb-4">
+          <span class="text-2xl font-bold text-gray-200">
+            {{ date | readableDate | replace(" ", ".") | replace(",", "") }}
+          </span>
+          <span>•</span>
+          <span>{{ readTime }}</span>
+        </div>
+        <h1 class="text-4xl font-bold text-foreground leading-tight">{{ title }}</h1>
+      </header>
+
+      <!-- Article Content -->
+      <div class="prose prose-lg prose-gray max-w-none text-gray-200 prose-headings:text-foreground prose-strong:text-foreground prose-a:text-primary hover:prose-a:text-foreground">
+        {{ content | safe }}
+      </div>
+
+      <!-- Article Footer -->
+      <footer class="mt-16 pt-8 border-t border-border">
+        <div class="flex justify-between items-center">
+          <a href="/blog/" class="text-gray-200 hover:text-foreground transition-colors">
+            ← More Posts
+          </a>
+        </div>
+      </footer>
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="bg-[#1d222b] py-12 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-lg font-semibold text-foreground mb-4">Everyday Logic</h3>
+      <p class="text-gray-200 mb-6 max-w-2xl mx-auto">
+        Exploring the balance between human intuition and artificial intelligence. Join the conversation about
+        finding meaning in our digital age.
+      </p>
+      <div class="flex justify-center space-x-6 text-sm text-gray-200">
+        <a href="/about/" class="hover:text-foreground">About</a>
+        <a href="/blog/" class="hover:text-foreground">Blog</a>
+        <span>© 2024 Everyday Logic</span>
+      </div>
+    </div>
+  </footer>
+</div>

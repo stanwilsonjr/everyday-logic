@@ -1,0 +1,45 @@
+---
+layout: base.njk
+title: Home
+description: Navigating the intersection of human wisdom and artificial intelligence. Finding your place in an ever-changing digital world.
+---
+
+<div class="min-h-screen bg-background">
+  <!-- Navigation -->
+  {% include "navigation.njk" %}
+
+  <!-- Hero Section -->
+  <section class="py-10 px-6">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-xl text-gray-200 mb-8 max-w-2xl ml-6">
+        Navigating the intersection of human wisdom and artificial intelligence. Finding your place in an
+        ever-changing digital world.
+      </p>
+    </div>
+  </section>
+
+  <!-- Recent Posts Section -->
+  <section class="py-8 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="space-y-14">
+        {% for post in collections.posts %}
+          {% include "blog-post-card.njk" %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1d222b] py-12 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-lg font-semibold text-foreground mb-4">Everyday Logic</h3>
+      <p class="text-sm text-gray-200 mb-6 max-w-2xl mx-auto">
+        Exploring the balance between human intuition and artificial intelligence. Join the conversation about
+        finding meaning in our digital age.
+      </p>
+      <div class="flex justify-center text-sm text-gray-200">
+        <span>© 2024 Everyday Logic</span>
+      </div>
+    </div>
+  </footer>
+</div>

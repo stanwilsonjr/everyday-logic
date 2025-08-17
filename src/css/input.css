@@ -1,0 +1,88 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --background: #252c37;
+  --foreground: #f8c61e;
+  --card: #252c37;
+  --card-foreground: #f8c61e;
+  --primary: #f8c61e;
+  --primary-foreground: #252c37;
+  --secondary: #3a4149;
+  --secondary-foreground: #f8c61e;
+  --muted: #3a4149;
+  --muted-foreground: #b8a068;
+  --accent: #f8c61e;
+  --accent-foreground: #252c37;
+  --border: #3a4149;
+  --input: #3a4149;
+  --ring: #f8c61e;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+/* Enhanced prose styling for blog posts */
+.prose {
+  @apply text-gray-200;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply text-foreground;
+}
+.prose h2{
+  @apply text-lg;
+   @apply mb-6;
+}
+.prose p {
+  @apply mb-6;
+}
+
+.prose strong {
+  @apply text-foreground;
+}
+
+.prose a {
+  @apply text-primary hover:text-foreground transition-colors;
+}
+
+.prose ul li {
+  @apply marker:text-primary;
+}
+
+.prose ol li {
+  @apply marker:text-primary;
+}
+
+.prose blockquote {
+  @apply border-l-primary text-gray-200;
+}
+
+.prose code {
+  @apply bg-secondary text-foreground px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre {
+  @apply bg-secondary border border-border;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}

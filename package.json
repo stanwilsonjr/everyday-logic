@@ -1,0 +1,32 @@
+{
+  "name": "everyday-logic-blog",
+  "version": "1.0.0",
+  "description": "A blog about navigating AI and human wisdom",
+  "scripts": {
+    "build": "npm run build:css && npx @11ty/eleventy",
+    "build:css": "npx tailwindcss -i src/css/input.css -o _site/css/style.css --minify",
+    "start": "npm run build:css && npx @11ty/eleventy --serve",
+    "dev": "concurrently \"npm run watch:css\" \"npx @11ty/eleventy --serve\"",
+    "watch:css": "npx tailwindcss -i src/css/input.css -o _site/css/style.css --watch"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "luxon": "^3.4.4",
+    "markdown-it": "^14.0.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.17"
+  },
+  "keywords": [
+    "blog",
+    "11ty",
+    "eleventy",
+    "tailwindcss"
+  ],
+  "author": "Everyday Logic",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  }
+}

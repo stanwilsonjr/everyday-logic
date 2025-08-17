@@ -1,0 +1,99 @@
+<nav class="bg-transparent">
+  <div class="max-w-4xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold text-foreground">
+        Everyday Logic
+      </a>
+
+      <div class="hidden md:flex space-x-8">
+        <a href="/" class="transition-colors {% if page.url == '/' %}text-foreground font-medium{% else %}text-gray-200 hover:text-foreground{% endif %}">
+          Home
+        </a>
+        <a href="/about/" class="transition-colors {% if '/about/' in page.url %}text-foreground font-medium{% else %}text-gray-200 hover:text-foreground{% endif %}">
+          About
+        </a>
+        <a href="/blog/" class="transition-colors {% if '/blog/' in page.url or '/posts/' in page.url %}text-foreground font-medium{% else %}text-gray-200 hover:text-foreground{% endif %}">
+          Blog
+        </a>
+        <a href="/contact/" class="transition-colors {% if '/contact/' in page.url %}text-foreground font-medium{% else %}text-gray-200 hover:text-foreground{% endif %}">
+          Contact
+        </a>
+      </div>
+
+      <button
+        class="md:hidden flex flex-col justify-center items-center w-8 h-8 p-1 mobile-menu-toggle"
+        aria-label="Toggle menu"
+      >
+        <span class="block w-6 h-0.5 bg-foreground transition-all duration-300 -translate-y-1 hamburger-line-1"></span>
+        <span class="block w-6 h-0.5 bg-foreground transition-all duration-300 opacity-100 scale-100 hamburger-line-2"></span>
+        <span class="block w-6 h-0.5 bg-foreground transition-all duration-300 translate-y-1 hamburger-line-3"></span>
+      </button>
+    </div>
+
+    <div class="md:hidden mt-4 pb-4 border-t border-border mobile-menu hidden">
+      <div class="flex flex-col space-y-4 pt-4">
+        <a href="/" class="transition-colors {% if page.url == '/' %}text-foreground font-medium{% else %}text-gray-200 hover:text-foreground{% endif %}">
+          Home
+        </a>
+        <a href="/about/" class="transition-colors {% if '/about/' in page.url %}text-foreground font-medium{% else %}text-gray-200 hover:text-foreground{% endif %}">
+          About
+        </a>
+        <a href="/blog/" class="transition-colors {% if '/blog/' in page.url or '/posts/' in page.url %}text-foreground font-medium{% else %}text-gray-200 hover:text-foreground{% endif %}">
+          Blog
+        </a>
+        <a href="/contact/" class="transition-colors {% if '/contact/' in page.url %}text-foreground font-medium{% else %}text-gray-200 hover:text-foreground{% endif %}">
+          Contact
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const hamburgerLine1 = document.querySelector('.hamburger-line-1');
+  const hamburgerLine2 = document.querySelector('.hamburger-line-2');
+  const hamburgerLine3 = document.querySelector('.hamburger-line-3');
+  
+  let isMenuOpen = false;
+  
+  mobileMenuToggle.addEventListener('click', function() {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      mobileMenu.classList.remove('hidden');
+      hamburgerLine1.classList.remove('-translate-y-1');
+      hamburgerLine1.classList.add('rotate-45', 'translate-y-0.5');
+      hamburgerLine2.classList.remove('opacity-100', 'scale-100');
+      hamburgerLine2.classList.add('opacity-0', 'scale-0');
+      hamburgerLine3.classList.remove('translate-y-1');
+      hamburgerLine3.classList.add('-rotate-45', '-translate-y-0.5');
+    } else {
+      mobileMenu.classList.add('hidden');
+      hamburgerLine1.classList.add('-translate-y-1');
+      hamburgerLine1.classList.remove('rotate-45', 'translate-y-0.5');
+      hamburgerLine2.classList.add('opacity-100', 'scale-100');
+      hamburgerLine2.classList.remove('opacity-0', 'scale-0');
+      hamburgerLine3.classList.add('translate-y-1');
+      hamburgerLine3.classList.remove('-rotate-45', '-translate-y-0.5');
+    }
+  });
+  
+  // Close mobile menu when clicking on links
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      isMenuOpen = false;
+      mobileMenu.classList.add('hidden');
+      hamburgerLine1.classList.add('-translate-y-1');
+      hamburgerLine1.classList.remove('rotate-45', 'translate-y-0.5');
+      hamburgerLine2.classList.add('opacity-100', 'scale-100');
+      hamburgerLine2.classList.remove('opacity-0', 'scale-0');
+      hamburgerLine3.classList.add('translate-y-1');
+      hamburgerLine3.classList.remove('-rotate-45', '-translate-y-0.5');
+    });
+  });
+});
+</script>
