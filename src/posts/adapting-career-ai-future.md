@@ -6,7 +6,7 @@ id: "03"
 readTime: "6 min read"
 ---
 
-The integration of AI into the workplace is no longer a distant possibility—it's happening now. Rather than viewing this as a threat, we can approach it as an opportunity to evolve and find new ways to create value in our careers.
+The integration of AI into the workplace is no longer a distant possibility—it's happening now. Rather than viewing this as a threat, we can approach it as an opportunity to evolve and find new ways to create value in our careers. This is just a test.
 
 ## Skills That Remain Uniquely Human
 
