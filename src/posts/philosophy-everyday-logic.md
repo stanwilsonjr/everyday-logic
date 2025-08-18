@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title: "The Philosophy of Everyday Logic"
 date: 2024-01-05
 excerpt: "What does it mean to think logically in a world where machines can process information faster than humans? Exploring the intersection of human reasoning and artificial intelligence."

@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title: "Adapting Your Career for an AI Future"
 date: 2024-01-10
 excerpt: "The job market is evolving rapidly with AI integration. Discover practical strategies for staying relevant and finding opportunities in this new landscape."

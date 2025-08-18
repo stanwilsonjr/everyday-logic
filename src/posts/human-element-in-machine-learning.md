@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title: "The Human Element in Machine Learning"
 date: 2024-01-12
 excerpt: "Behind every algorithm is human intention and bias. Explore how we can ensure technology serves humanity rather than replacing our essential human qualities."

@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title: "Building Meaningful Connections in Digital Spaces"
 date: 2024-01-08
 excerpt: "As our interactions become increasingly digital, maintaining genuine human connections requires intentional effort and new approaches to communication."
